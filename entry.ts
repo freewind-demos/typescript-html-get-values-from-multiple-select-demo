@@ -1,4 +1,7 @@
-import $ from 'jquery'
-import './index.css';
+const mySelect = document.getElementById('my-select') as HTMLSelectElement;
+const myButton = document.getElementById('my-button') as HTMLButtonElement;
 
-$('#main').text('Hello, webpack!');
+myButton.onclick = () => {
+  console.log('selected values', Array.from(mySelect.selectedOptions).map(it => it.value))
+  console.log('value', mySelect.value);
+}
